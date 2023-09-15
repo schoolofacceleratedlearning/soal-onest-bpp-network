@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.ts",
     "build": "tsc",
+    "start": "node dist/app.js",
     "generate-keys": "node scripts/generate-keys.js"
   },
   "author": "Ayush Agrawal",
