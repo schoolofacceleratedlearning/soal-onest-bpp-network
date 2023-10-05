@@ -11,6 +11,7 @@ export const getConfig = (): ConfigDataType => {
     }
 
     configuration = parseConfig(config);
+    configuration.server.port = process.env.PORT ? parseInt(process.env.PORT) : configuration.server.port;
     if(!configuration){
         throw new Exception(ExceptionType.Config_NotFound, "Config file is not found.", 404);
     }

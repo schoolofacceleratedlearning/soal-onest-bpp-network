@@ -1,0 +1,104 @@
+# Mandatory
+server:
+  port: 6002
+
+# Mandatory.
+cache:
+  host: "15.206.128.233"
+  port: 6379
+  ttl: "PT10M"
+  # Optional. Default is 0.
+  db: 0
+
+# Optional.
+responseCache:
+  mongoURL: "mongodb+srv://niskarsh:Nik.31@cluster0.bminf.mongodb.net/people?retryWrites=true&w=majority"
+  ttl: "PT10M"
+
+# Mandatory.
+# Priority order will be
+# 1. Synchronous
+# 2. webhook
+# 3. pubSub
+client:
+  # synchronous:
+  #   mongoURL: "mongodb://127.0.0.1:27017/protocolserver-v2-response-cache"
+
+  webhook:
+    url: "https://soal-provider-api.onrender.com/v1.0.0/api/public"
+
+  #messageQueue:
+  #  amqpURL: "amqp://guest:guest@localhost:5672"
+  #  incomingQueue: "protocol-server-incoming"
+  #  outgoingQueue: "protocol-server-outgoing"
+
+# Mandatory.
+app:
+  # Mandatory.
+  mode: bpp
+
+  # Two types of gateway mode present.
+  # client and network.
+  gateway:
+    mode: network
+    inboxQueue: "inbox-bpp"
+    outboxQueue: "outbox-bpp"
+    amqpURL: "amqps://admin:eQJaFYvyD7eOykt1WfSq5SI9ptIg8Qh8@9p31kz.stackhero-network.com:5671"
+
+  # Mandatory.
+  actions:
+    requests:
+      search:
+        ttl: "PT20S"
+      init:
+        ttl: "PT20S"
+      select:
+        ttl: "PT20S"
+      confirm:
+        ttl: "PT20S"
+      status:
+        ttl: "PT20S"
+      get_cancellation_reasons:
+        ttl: "PT20S"
+      get_rating_categories:
+        ttl: "PT20S"
+
+    responses:
+      on_search:
+        ttl: "PT20S"
+      on_init:
+        ttl: "PT20S"
+      on_select:
+        ttl: "PT20S"
+      on_confirm:
+        ttl: "PT20S"
+      on_status:
+        ttl: "PT20S"
+      cancellation_reasons:
+        ttl: "PT20S"
+      rating_categories:
+        ttl: "PT20S"
+
+  # Mandatory.
+  privateKey: "QsFchiZU2GU1g8KhYi6JFa8TW6KQp593CJzN75vk8kkqyAUKCyLx3vnl42ciAsT5PDOjBfv2F0gy+1YHQii29A=="
+  publicKey: "KsgFCgsi8d755eNnIgLE+TwzowX79hdIMvtWB0IotvQ="
+
+  # Mandatory.
+  subscriberId: "soal-bpp"
+  subscriberUri: "https://soal-onest-bpp-network.onrender.com"
+
+  # Mandatory.
+  registryUrl: https://registry.becknprotocol.io/subscribers
+  auth: false
+  uniqueKey: "soal.acea3fc474a24f438e09a9e934234436"
+
+  # Mandatory.
+  city: "std:080"
+  country: "IND"
+
+  # Mandatory.
+  ttl: "PT10M"
+
+  # Mandatory.
+  httpTimeout: "PT3S"
+  httpRetryCount: 2
