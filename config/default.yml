@@ -90,7 +90,7 @@ app:
   # Mandatory.
   registryUrl: https://registry.becknprotocol.io/subscribers
   auth: false
-  uniqueKey: "soal.acea3fc474a24f438e09a9e934234436"
+  uniqueKey: "soal-bap.key"
 
   # Mandatory.
   city: "std:080"
