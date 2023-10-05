@@ -26,7 +26,7 @@ export class MQClient {
             this.channel=tempChannel
             this.isConnected=true
     
-            logger.info(`MQ Client Connected For: ${this.amqpUrl.split("@")[1].split(":")[0]}`)
+            // logger.info(`MQ Client Connected For: ${this.amqpUrl.split("@")[1].split(":")[0]}`)
         } catch (error) {
             throw new Exception(ExceptionType.MQ_ConnectionFailed, `MQ Client Connection Failed For URL: ${this.amqpUrl}`, 500, error);
         }
