@@ -85,10 +85,10 @@ app:
 
   # Mandatory.
   subscriberId: "soal-bpp"
-  subscriberUri: "https://soal-onest-bpp-network.onrender.com"
+  subscriberUri: "https://soal-onest-bpp-network.onrender.com/"
 
   # Mandatory.
-  registryUrl: https://registry.becknprotocol.io/subscribers
+  registryUrl: "https://registry.becknprotocol.io/subscribers"
   auth: false
   uniqueKey: "soal-bap.key"
 
