@@ -25,7 +25,7 @@ client:
   #   mongoURL: "mongodb://127.0.0.1:27017/protocolserver-v2-response-cache"
 
   webhook:
-    url: "https://soal-provider-api.onrender.com/v1.0.0/api/public"
+    url: "https://soal-onest-webhook-sandbox.onrender.com"
 
   #messageQueue:
   #  amqpURL: "amqp://guest:guest@localhost:5672"
