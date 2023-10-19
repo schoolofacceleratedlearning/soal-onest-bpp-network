@@ -12,7 +12,7 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=tvast
       - MONGO_INITDB_ROOT_PASSWORD=password
-      - MONGO_INITDB_DATABASE=ps
+      - MONGO_INITDB_DATABASE=protocolserver-v2-response-cache
 
   redis_db:
     image: redis:6.2.5-alpine

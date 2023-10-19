@@ -4,7 +4,7 @@ server:
 
 # Mandatory.
 cache:
-  host: "15.206.128.233"
+  host: "3.111.144.76"
   port: 6379
   ttl: "PT10M"
   # Optional. Default is 0.
@@ -12,7 +12,7 @@ cache:
 
 # Optional.
 responseCache:
-  mongoURL: "mongodb+srv://niskarsh:Nik.31@cluster0.bminf.mongodb.net/people?retryWrites=true&w=majority"
+  mongoURL: "mongodb://tvast:password@3.111.144.76/protocolserver-v2-response-cache?authSource=admin"
   ttl: "PT10M"
 
 # Mandatory.
@@ -25,7 +25,7 @@ client:
   #   mongoURL: "mongodb://127.0.0.1:27017/protocolserver-v2-response-cache"
 
   webhook:
-    url: "https://soal-onest-webhook-sandbox.onrender.com"
+    url: "https://webhooksandbox.buildononest.com"
 
   #messageQueue:
   #  amqpURL: "amqp://guest:guest@localhost:5672"
@@ -43,7 +43,7 @@ app:
     mode: network
     inboxQueue: "inbox-bpp"
     outboxQueue: "outbox-bpp"
-    amqpURL: "amqps://admin:eQJaFYvyD7eOykt1WfSq5SI9ptIg8Qh8@9p31kz.stackhero-network.com:5671"
+    amqpURL: "amqp://tvast:password@3.111.144.76:5672"
 
   # Mandatory.
   actions:
