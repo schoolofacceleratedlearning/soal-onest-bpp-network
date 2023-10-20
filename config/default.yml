@@ -4,15 +4,15 @@ server:
 
 # Mandatory.
 cache:
-  host: "3.111.144.76"
-  port: 6379
+  host: "0.0.0.0"
+  port: 0000
   ttl: "PT10M"
   # Optional. Default is 0.
   db: 0
 
 # Optional.
 responseCache:
-  mongoURL: "mongodb://tvast:password@3.111.144.76/protocolserver-v2-response-cache?authSource=admin"
+  mongoURL: "mongodb://xxxx:xxxxx@0.0.0.0/xxxx?authSource=admin"
   ttl: "PT10M"
 
 # Mandatory.
@@ -25,7 +25,7 @@ client:
   #   mongoURL: "mongodb://127.0.0.1:27017/protocolserver-v2-response-cache"
 
   webhook:
-    url: "https://webhooksandbox.buildononest.com"
+    url: "https://xxx.xxxxxx.com"
 
   #messageQueue:
   #  amqpURL: "amqp://guest:guest@localhost:5672"
@@ -41,9 +41,9 @@ app:
   # client and network.
   gateway:
     mode: network
-    inboxQueue: "inbox-bpp"
-    outboxQueue: "outbox-bpp"
-    amqpURL: "amqp://tvast:password@3.111.144.76:5672"
+    inboxQueue: "xxxx"
+    outboxQueue: "xxxx"
+    amqpURL: "amqp://xxx:xxxx@0.0.0.0:0000"
 
   # Mandatory.
   actions:
@@ -80,25 +80,25 @@ app:
         ttl: "PT20S"
 
   # Mandatory.
-  privateKey: "QsFchiZU2GU1g8KhYi6JFa8TW6KQp593CJzN75vk8kkqyAUKCyLx3vnl42ciAsT5PDOjBfv2F0gy+1YHQii29A=="
-  publicKey: "KsgFCgsi8d755eNnIgLE+TwzowX79hdIMvtWB0IotvQ="
+  privateKey: "xxxx"
+  publicKey: "xxxx"
 
   # Mandatory.
-  subscriberId: "soal-bpp"
-  subscriberUri: "https://soal-onest-bpp-network.onrender.com/"
+  subscriberId: "xxxx"
+  subscriberUri: "xxxx"
 
   # Mandatory.
-  registryUrl: "https://registry.becknprotocol.io/subscribers"
+  registryUrl: "xxxx"
   auth: false
-  uniqueKey: "soal-bap.key"
+  uniqueKey: "xxxx"
 
   # Mandatory.
-  city: "std:080"
-  country: "IND"
+  city: "xxxx"
+  country: "xxxx"
 
   # Mandatory.
   ttl: "PT10M"
 
   # Mandatory.
   httpTimeout: "PT3S"
-  httpRetryCount: 2
+  httpRetryCount: 0
